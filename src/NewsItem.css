@@ -1,0 +1,27 @@
+.news-item .news-title {
+  margin: 0.5rem auto;
+  font-weight: 400;
+}
+
+.news-item .news-title a {
+  text-decoration: none;
+  color: white;
+}
+
+.news-item .news-title .news-url {
+  font-weight: lighter;
+  font-size: 0.7rem;
+}
+
+.news-item .news-title:hover {
+  font-weight: bolder;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+.news-item .news-info {
+  margin: 0.2rem auto;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+/*# sourceMappingURL=NewsItem.css.map */

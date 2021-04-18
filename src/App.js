@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import "./App.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchIDs, fetchNews } from './Store/actions/news'
+import { NewsItem } from './NewsItem';
+import Box from '@material-ui/core/Box';
+import { Title } from './Title';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,9 +36,17 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div>
-        <div>Hacker News</div>
+    <Box margin="5%">
+
+      <Title />
+
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="start"
+        minWidth={400}
+        width='100%'
+      >
         {!news ?
         (
           <div>Loading...</div>
@@ -43,20 +54,19 @@ function App() {
         : (
           <>
           {
-            news.map(item =>
-            <div className="news-item" id={item.id}>
-              <div>{item.title}</div>
-              <div>{item.by}</div>
-              <div>{item.url}</div>
-            </div>
+            news
+              .sort((a,b) => a.score < b.score ? 1 : -1)
+              .map((item, i) =>
+              <NewsItem item={item} id={item.id} number={i} />
+
             )
           }
           <button onClick={handleClick}>MORE</button>
           </>
         )
         }
-      </div>
-    </div>
+      </Box>
+    </Box>
   )
 }
 

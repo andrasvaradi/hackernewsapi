@@ -1,0 +1,58 @@
+.title {
+  letter-spacing: 10;
+  width: 100%;
+  font-size: 3rem;
+  color: #ffffff;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+@keyframes blink {
+  0% {
+    color: #000000;
+  }
+  5% {
+    color: #ffffff;
+  }
+  97% {
+    color: #ffffff;
+
+  }
+}
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 1s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #0c0c0c;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  21% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
