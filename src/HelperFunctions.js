@@ -22,3 +22,7 @@ export function trimUrl(url) {
   const { hostname } = new URL(url);
   return hostname;
 }
+
+export const sorting = () => {
+  
+}

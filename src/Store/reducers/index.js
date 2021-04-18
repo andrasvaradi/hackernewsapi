@@ -1,5 +1,5 @@
 /* eslint-disable default-case */
-import { SET_NEWS, SET_NEWS_IDS, SET_LOADING, SET_LOADCOUNT } from '../actions/actionTypes';
+import { SET_NEWS, SET_NEWS_IDS, SET_LOADING } from '../actions/actionTypes';
 const initialState = {
   newsIDs: [],
   news: [],

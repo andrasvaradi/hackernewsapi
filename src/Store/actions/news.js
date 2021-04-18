@@ -1,5 +1,5 @@
 import { getTopRatedNews, getNewsByID } from '../../ApiClientService/items';
-import { SET_NEWS, SET_NEWS_IDS, SET_LOADING, SET_LOADCOUNT } from './actionTypes';
+import { SET_NEWS, SET_NEWS_IDS, SET_LOADING } from './actionTypes';
 
 export function fetchIDs() {
   return function (dispatch) {
@@ -37,7 +37,6 @@ const setNews = (news) => {
     payload: news,
   };
 }
-
 const setLoading = (isLoading) => {
   return {
     type: SET_LOADING,
